@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Selamat Hari Jadian Sayang</title>
+    <style>
+        body {
+            background: #fff0f5;
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-image: url('https://i.imgur.com/SZQX0C9.png');
+            background-size: cover;
+            background-position: center;
+            height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-shadow: 1px 1px 4px #000;
+            font-size: 2em;
+        }
+        .container {
+            text-align: center;
+            padding: 30px;
+        }
+        .heart-balloon {
+            display: inline-block;
+            margin: 15px;
+            position: relative;
+            cursor: pointer;
+        }
+        .heart-balloon img {
+            width: 90px;
+            transition: transform 0.3s ease;
+        }
+        .message {
+            display: none;
+            font-size: 1em;
+            margin-top: 10px;
+            color: #c1446c;
+            max-width: 300px;
+        }
+        .footer {
+            background-color: #ffe4e1;
+            text-align: center;
+            padding: 15px;
+            font-size: 1.3em;
+            color: #e75480;
+        }
+        .search-container {
+            margin-top: 50px;
+            text-align: center;
+        }
+        #searchInput {
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            width: 200px;
+        }
+        #searchResult {
+            margin-top: 20px;
+        }
+        #searchResult img {
+            width: 150px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header>Selamat Hari Jadian Sayang</header>
+
+    <div class="container">
+        <div class="heart-balloon" onclick="popBalloon(0)">
+            <img src="https://i.imgur.com/7sXl3pM.png" alt="Heart Balloon">
+            <div class="message">selamat hari jadian sayang, aku senang kita bisa lalui ini bersama hingga saat ini. betapa beruntungnya aku bisa bersama ayang yang penyabar sekali dan menyayangi ku 🥰❤️❤️❤️🥰🥰🥰</div>
+        </div>
+        <div class="heart-balloon" onclick="popBalloon(1)">
+            <img src="https://i.imgur.com/7sXl3pM.png" alt="Heart Balloon">
+            <div class="message">sayang, aku takut sekali kehilangan sayang. mungkin dengan adanya cobaan yang menimpa kita berturut turut buat aku sadar, kalau jika aku tidak menghargai keberadaan dan setiap momen yang ada sayang akan pergi dan menghilang 🥺❤️❤️❤️❤️❤️❤️❤️❤️</div>
+        </div>
+        <div class="heart-balloon" onclick="popBalloon(2)">
+            <img src="https://i.imgur.com/7sXl3pM.png" alt="Heart Balloon">
+            <div class="message">sayang sehat selalu yah, aku mau melalui hal hal lainnya dengan sayang. aku bahagia sekali dengan sayang. sayang selalu buat aku tersenyum dan tertawa. apapun akan sayang lakukan agar membuat ku bahagia ❤️🥰😘😍😻😍😘🥰❤️❤️🥰😘😍😻</div>
+        </div>
+    </div>
+
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Cari sesuatu..." oninput="handleSearch()">
+        <div id="searchResult">
+            <img id="cakeImg" src="https://i.imgur.com/KkYrFzC.png" alt="Kue dengan Lilin">
+        </div>
+    </div>
+
+    <div class="footer">love you sayang</div>
+
+    <script>
+        function popBalloon(index) {
+            const balloons = document.querySelectorAll('.heart-balloon');
+            const balloon = balloons[index];
+            const img = balloon.querySelector('img');
+            const message = balloon.querySelector('.message');
+            img.style.transform = "scale(0)";
+            setTimeout(() => {
+                img.style.display = "none";
+                message.style.display = "block";
+            }, 300);
+        }
+
+        function handleSearch() {
+            const input = document.getElementById('searchInput').value.toLowerCase();
+            const cakeImg = document.getElementById('cakeImg');
+            cakeImg.style.display = input ? "block" : "none";
+        }
+    </script>
+</body>
+</html>
