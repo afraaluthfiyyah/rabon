@@ -1,0 +1,128 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #f3c6e0, #d1c2f4);
+    font-family: 'Arial', sans-serif;
+    color: #5f3a7d;
+    overflow: hidden;
+}
+
+header {
+    text-align: center;
+    padding: 60px 0;
+}
+
+h1 {
+    font-size: 4em;
+    color: #ff7f7f;
+    animation: fadeIn 3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.game-container {
+    text-align: center;
+    padding: 40px;
+    position: relative;
+}
+
+.balloon {
+    display: inline-block;
+    margin: 20px;
+    width: 120px;
+    height: 160px;
+    background: #ff7f7f;
+    border-radius: 50%;
+    position: relative;
+    animation: floatUp 5s ease-in-out infinite;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.balloon:hover {
+    transform: scale(1.1);
+}
+
+.balloon p {
+    color: white;
+    font-size: 36px;
+    text-align: center;
+    line-height: 160px;
+}
+
+@keyframes floatUp {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-30px); }
+    100% { transform: translateY(0); }
+}
+
+.footer {
+    text-align: center;
+    padding: 30px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    background-color: #f8d1e0;
+    color: #ff7f7f;
+    font-size: 1.5em;
+}
+
+.message {
+    font-size: 1.5em;
+    color: #ff7f7f;
+    animation: fadeIn 3s ease-in-out;
+    display: none;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Animasi bunga dan hati */
+.floating-heart {
+    position: absolute;
+    font-size: 50px;
+    color: #ff4d6d;
+    animation: heartFloat 10s ease-in-out infinite;
+}
+
+@keyframes heartFloat {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-100px); }
+    100% { transform: translateY(0); }
+}
+
+.floating-flower {
+    position: absolute;
+    font-size: 40px;
+    color: #ff99cc;
+    animation: flowerFloat 10s ease-in-out infinite;
+}
+
+@keyframes flowerFloat {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-120px); }
+    100% { transform: translateY(0); }
+}
+
+.music-player {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: #ff7f7f;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.message-text {
+    animation: typing 5s steps(30) 1s normal both;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
